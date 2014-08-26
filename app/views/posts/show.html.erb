@@ -1,0 +1,10 @@
+<h1><%= link_to @post.title, @post.url %></h1>
+
+<table>
+  <% @comments.each do |comment| %>
+    <tr>
+      <td><%= comment.text %></td>
+      <td> - by <%= comment.commenter.email %></td>
+    </tr>
+  <% end %>
+</table>
